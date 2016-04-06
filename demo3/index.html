@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<script src="index.js"></script>
+		<script>
+		window.addEventListener('load', pageLoad , false);
+		function pageLoad(){
+			var canvas = document.getElementById('canvas');
+			SECTER.update(canvas, 330.00, 700.50, 1000.00);
+		}
+		</script>
+	</head>
+	<body>
+		<div style='text-align:center; margin:0 auto'>
+			<canvas id='canvas' >
+			Canvas not supported
+			</canvas>
+		</div>
+	</body>
+</html>

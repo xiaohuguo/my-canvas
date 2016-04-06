@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<style>
+			html{width:100%;height:100%}
+			body{width:100%;height:100%;padding:0;margin:0;};
+		</style>
+		<script src="index.js"></script>
+		<script>
+		window.addEventListener('load', pageLoad , false);
+		var data = [{
+				"date": "Fri Feb 01 2013",
+				"spend": 1100
+			}, {
+				"date": "Fri Mar 01 2013",
+				"spend": 1010
+			},{
+				"date": "Mon Apr 01 2013",
+				"spend": 710
+			}, {
+				"date": "Wed May 01 2013",
+				"spend": 900
+			}, {
+				"date": "Sat Jun 01 2013",
+				"spend": 810
+			},{
+				"date": "Mon Jul 01 2013",
+				"spend": 820
+			}];
+		function pageLoad(){
+			var wrapDiv = document.getElementById('wrapDiv');
+			var spendSlider = new REPORT.SpendSlider(data);
+			spendSlider.draw();
+			spendSlider.appendTo(wrapDiv);
+			// data[0].spend=1400;
+			// spendSlider.update(data);
+		}
+		</script>
+	</head>
+	<body>
+		<div id="wrapDiv" style='text-align:center; margin:0 auto'>
+		</div>
+	</body>
+</html>
