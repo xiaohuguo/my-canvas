@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<style>
+			html{width:100%;height:100%}
+			body{width:100%;height:100%;padding:0;margin:0;};
+		</style>
+		<script src="index.js"></script>
+		<script>
+		window.addEventListener('load', pageLoad , false);
+		var data = [{
+				"date": "Thu Nov 01 2012",
+				"income": 800,
+				"spend": 1001,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Sat Dec 01 2012",
+				"income": 1000,
+				"spend": 11,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Tue Jan 01 2013",
+				"income": 1140,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			},{
+				"date": "Fri Feb 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Fri Mar 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			},{
+				"date": "Mon Apr 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Wed May 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Sat Jun 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			},{
+				"date": "Mon Jul 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			},{
+				"date": "Thu Aug 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Sun Sep 01 2013",
+				"income": 1000,
+				"spend": 900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Tue Oct 01 2013",
+				"income": 51001,
+				"spend": 51900,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Fri Nov 01 2013",
+				"income": 400,
+				"spend": 300,
+				"predict": {
+					"income": -1,
+					"spend": -1
+				}
+			}, {
+				"date": "Sun Dec 01 2013",
+				"income": 0,
+				"spend": 0,
+				"predict": {
+					"income": 1000,
+					"spend": 780
+				}
+			}];
+		function pageLoad(){
+			var wrapDiv = document.getElementById('wrapDiv');
+			var yearBook = new REPORT.YearBook(data);
+			yearBook.appendTo(wrapDiv);
+			yearBook.draw();
+			// data[0].income = 2100;
+			// yearBook.update(data);
+		}
+		</script>
+	</head>
+	<body>
+		<div id="wrapDiv" style='text-align:center; margin:0 auto'>
+		</div>
+	</body>
+</html>
